@@ -1,0 +1,66 @@
+{% comment %}
+** Divider - dynamic **
+- Draggable section
+{% endcomment %}
+
+{% include 'include-reviews-widget' %}
+
+{% schema %}
+  {
+    "name": "Reviews Widget",
+    "class": "reviews-section",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Reviews - Stamped"
+      },
+	  {
+        "type": "header",
+        "content": "Layout"
+      },
+      {
+        "type": "select",
+        "id": "width",
+        "label": "Width",
+        "default": "standard",
+        "options": [
+          {
+            "value": "standard",
+            "label": "Standard"
+          },
+          {
+            "value": "wide",
+            "label": "Wide"
+          }
+        ]
+      },
+      {
+        "type": "range",
+        "id": "padding_top",
+        "label": "Top spacing",
+        "min": 0,
+        "max": 80,
+        "default": 20,
+        "unit": "px"
+      },
+      {
+        "type": "range",
+        "id": "padding_bottom",
+        "label": "Bottom spacing",
+        "min": 0,
+        "max": 80,
+        "default": 20,
+        "unit": "px"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Reviews Widget",
+        "category": "Store Information",
+        "settings": {
+
+        }
+      }
+    ]
+  }
+{% endschema %}
